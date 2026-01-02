@@ -2,7 +2,7 @@
 name: Technical Request
 about: Use when product already approved the feature and needs development-level clarity.
 title: 'tech - '
-labels: ["technical"]
+labels: ["tech"]
 assignees: ''
 
 ---
