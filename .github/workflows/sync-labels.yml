@@ -14,7 +14,7 @@ jobs:
           ref: main
           fetch-depth: 1
       - name: Apply labels
-        uses: benc-uk/github-label-sync@v2
+        uses: benc-uk/github-label-sync@v2.0.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           configuration-path: "template-repo/.github/labels.json"
