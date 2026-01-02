@@ -1,0 +1,20 @@
+name: Apply Template Labels Once
+on:
+  workflow_dispatch: # manual trigger
+
+jobs:
+  apply-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout template repo
+        uses: actions/checkout@v3
+        with:
+          repository: monark-community/repo-structure-template
+          path: template-repo
+          ref: main
+          fetch-depth: 1
+      - name: Apply labels
+        uses: benc-uk/github-label-sync@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: "template-repo/.github/labels.json"
